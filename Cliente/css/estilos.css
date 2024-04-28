@@ -1,0 +1,67 @@
+/*realizacion de un framework*/
+/*la clase fondo nos ayuda a poner un alto completo y un ancho completo de toda nuestra pantalla*/
+.fondo{
+    position: absolute;/*permite colocar */
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover; /*el object-fit mantiene la relacion de aspecto de la imagen*/
+    z-index: -1;
+}
+
+/*la clase exedente nos ayuda a quitar los exedentes en los que se pasan la pantalla*/
+.exedente{
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    /*estilos indepenientes*/
+    /*aqui se encuentran los estilos de fondo*/
+}
+
+#contenedor-index{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card{/*este es el padre */
+    position: relative;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);/*para centrar horizontalemnte se ocupa el 50% en left y se corrige con el transform traslate igual se puede con el right */
+    background-color: beige;
+    height: 650px;
+    width: 400px;
+}
+.letra{/*es el hijo de la card se guia de la posicion del padre que es relative*/
+    position: absolute;/*la posicion que se adapta al contenerdor padre "relative"*/
+    color: rgb(8, 8, 8); /*indica el color de la letra*/
+    font-size: 3rem;/*indica el tamaño de la letra*/
+    left: 40px;
+}
+.imagen-c{
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300px;
+    width: 300px;
+    background-image: url("../imagenes/dulces.jpg");
+    background-size: cover;/*es una herramienta del background que mantien la relacion del aspecto de la imagen*/
+}
+.descripcion{
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 40px;
+    left: 40px;
+}
+.boton-carrito{
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0);
+    border: none;
+    right: 0;
+    bottom: 15px;
+    font-size: 3rem;
+}
+
